@@ -18,7 +18,7 @@ const Header = () => {
   }
 
   return (
-    <header className="dark:text-white pb-4 pt-32">
+    <header className="container mx-auto px-4 py-8 max-w-3xl mt-8 dark:text-white">
       <div className='flex'>
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo y Nombre */}
@@ -55,10 +55,10 @@ const Header = () => {
 
           {/* Navegación */}
           <div className='md:px-4 '>
-            <span className='text-titleDark dark:text-title text-xs md:text-2xl font-bold font-menlo '>
+            <span className='dark:text-title text-subtitles text-xs md:text-2xl font-bold font-menlo'>
               Claudia Saldivar
             </span>
-            <nav className={`md:flex space-x-4 mb-2 font-menlo font-light text-sm text-content pt-2 ${
+            <nav className={`md:flex space-x-4 mb-2 font-menlo font-light text-sm dark:text-content text-content2 pt-2 ${
               menuOpen ? 'block' : 'hidden'
             } md:block`}>
               <a href="#" className="border-r border-[#9ca991] border-dashed pr-4 hover:text-gray-400">

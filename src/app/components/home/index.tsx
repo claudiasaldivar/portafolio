@@ -44,12 +44,12 @@ const HomePage: FC = () => {
   ];
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-3xl mt-4">
+    <main className="container mx-auto px-4 py-8 max-w-3xl">
       {/* Intro Section */}
       <section className="mb-12">
-        <h1 className="text-sm md:text-2xl font-bold font-menlo text-title">Hi there!</h1>
-        <p className="font-menlo font-light text-sm text-title leading-relaxed mb-6 mt-6">
-          I'm Gift Egwuenu, a developer advocate at Cloudflare, focusing on the developer
+        <h1 className="text-md md:text-2xl font-bold font-menlo dark:text-title text-subtitles">Hi there!</h1>
+        <p className="font-menlo font-light text-sm dark:text-title text-subtitles leading-relaxed mb-6 mt-6">
+          I'm <span className='dark:text-content text-content2'>Gift Egwuenu</span>, a developer advocate at Cloudflare, focusing on the developer
           platform. My role involves simplifying complex technical concepts and empowering
           developers to build applications with Workers. My goal is to make technology
           accessible and comprehensible to everyone. This website serves as my digital
@@ -58,14 +58,14 @@ const HomePage: FC = () => {
         
         {/* Social Links */}
         <div className="flex items-center space-x-4">
-          <span className="font-menlo font-light text-sm text-title">Find me on</span>
+          <span className="font-menlo font-light text-sm dark:text-title text-subtitles">Find me on</span>
           {socialLinks.map((link, index) => (
             <a
               key={index}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-title hover:text-content dark:text-content dark:hover:text-title transition-colors"
+              className="hover:text-content dark:text-title text-subtitles dark:hover:text-title transition-colors"
             >
               {link.icon}
             </a>
@@ -75,20 +75,20 @@ const HomePage: FC = () => {
 
       {/* Work Section */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 dark:text-white">Work</h2>
-        <div className="space-y-4">
+        <h2 className="text-md md:text-2xl font-bold font-menlo dark:text-title text-subtitles">Work</h2>
+        <div className="font-menlo font-light text-sm dark:text-title text-subtitles leading-relaxed mb-6 mt-6">
           {workExperience.map((work, index) => (
-            <div key={index}>
+            <div key={index} className='flex py-2'>
               <a
                 href={work.url}
-                className="text-gray-800 dark:text-gray-200 hover:underline font-medium"
+                className="dark:text-title text-subtitles underline font-medium"
               >
                 {work.company}
               </a>
-              <p className="text-gray-600 dark:text-gray-400">{work.description}</p>
+              <p className="dark:text-title text-subtitles">&nbsp;{work.description}</p>
             </div>
           ))}
-          <a href="#" className="text-gray-800 dark:text-gray-200 hover:underline block">
+          <a href="#" className="dark:text-title text-subtitles font-bold hover:underline block py-2">
             More Places I've worked
           </a>
         </div>
@@ -96,20 +96,24 @@ const HomePage: FC = () => {
 
       {/* Posts Section */}
       <section>
-        <h2 className="text-2xl font-bold mb-6 dark:text-white">Posts</h2>
-        <div className="space-y-4">
+        <h2 className="text-md md:text-2xl font-bold font-menlo dark:text-title text-subtitles">Posts</h2>
+        <div className="font-menlo font-light text-sm dark:text-title text-subtitles leading-relaxed mb-6 mt-6">
           {blogPosts.map((post, index) => (
-            <div key={index} className="flex">
-              <span className="text-gray-500 dark:text-gray-400 w-24 flex-shrink-0">
+            <div key={index} className="flex flex-col md:flex-row py-1">
+            <div className="flex items-center md:pr-2 min-w-[120px]">
+              <span className="dark:text-title text-subtitles">
                 {post.date}
               </span>
+            </div>
+            <div className="flex items-start md:pl-2">
               <a
                 href={post.url}
-                className="text-gray-800 dark:text-gray-200 hover:underline"
+                className="dark:text-title text-subtitles underline font-medium flex-1"
               >
                 {post.title}
               </a>
             </div>
+          </div>
           ))}
         </div>
       </section>

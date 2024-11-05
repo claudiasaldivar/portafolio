@@ -1,7 +1,6 @@
 // layout.tsx
 "use client";
 
-import { metadata } from "./metadata";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -25,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
