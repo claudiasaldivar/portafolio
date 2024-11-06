@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable react/no-unescaped-entities */
 import { FC } from 'react';
 import { Twitter, Github, Instagram, Linkedin, Mail } from 'lucide-react';
 
