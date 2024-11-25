@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  mode: 'jit', // Just-In-Time mode activado
   darkMode: 'class', // Configuración para dark mode
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
