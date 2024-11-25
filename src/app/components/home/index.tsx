@@ -1,38 +1,36 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
 import { FC } from 'react';
-import { Twitter, Github, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const HomePage: FC = () => {
   const socialLinks = [
-    { icon: <Twitter size={20} />, url: "https://twitter.com/your_handle" },
-    { icon: <Github size={20} />, url: "https://github.com/your_handle" },
-    { icon: <Instagram size={20} />, url: "https://instagram.com/your_handle" },
-    { icon: <Linkedin size={20} />, url: "https://linkedin.com/in/your_handle" },
-    { icon: <Mail size={20} />, url: "mailto:your@email.com" }
+    { icon: <Github size={20} />, url: "https://github.com/claudiasaldivar" },
+    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/claudia-saldivar/" },
+    { icon: <Mail size={20} />, url: "mailto:claudiasaldivar493@@gmail.com" }
   ];
 
   const workExperience = [
     {
-      company: "Cloudflare",
-      description: "empowering developers in building application using Cloudflare Workers",
+      company: "Softmods",
+      description: "I lead the team, providing support and guidance to developers while also contributing to the development of both front-end and back-end solutions, as well as overseeing the deployment of applications.",
       url: "#"
     },
     {
-      company: "Passionate People",
-      description: "frontend developer consultant, worked with Valtech and KPN",
+      company: "Fractall",
+      description: "I led the development of the front-end using React and Web3, integrating various services for Ethereum. I also worked with low-code platforms, including Bubble.io, to streamline application development",
       url: "#"
     },
     {
-      company: "Andela",
-      description: "developed internal software and supported pm as a scrum leader",
+      company: "LoftMX",
+      description: "I served as Frontend Development Lead, responsible for creating and maintaining the company’s platforms. I also led a development team, providing mentorship and support to foster their professional growth.",
       url: "#"
     }
   ];
 
   const blogPosts = [
+    { date: "6 Nov 2024", title: "Show Your Work!", url: "portafolio/post/1" },
     { date: "23 Mar 2021", title: "Delete Multiple Branches in Git", url: "#" },
-    { date: "3 Mar 2021", title: "Show Your Work!", url: "#" },
     { date: "11 Feb 2021", title: "Buddy vs. Travis CI: A Detailed Comparison", url: "#" },
     { date: "30 Sept 2020", title: "Vuejs Global 2020: A Recap", url: "#" },
     { date: "8 Jun 2020", title: "Deploy a Gridsome App on Azure Static Web Apps", url: "#" },
@@ -49,11 +47,10 @@ const HomePage: FC = () => {
       <section className="mb-12">
         <h1 className="text-md md:text-2xl font-bold font-menlo dark:text-title text-subtitles">Hi there!</h1>
         <p className="font-menlo font-light text-sm dark:text-title text-subtitles leading-relaxed mb-6 mt-6">
-          I'm <span className='dark:text-content text-content2'>Gift Egwuenu</span>, a developer advocate at Cloudflare, focusing on the developer
-          platform. My role involves simplifying complex technical concepts and empowering
-          developers to build applications with Workers. My goal is to make technology
-          accessible and comprehensible to everyone. This website serves as my digital
-          garden, a space where I share my learnings and document my professional journey.
+          I'm <span className='dark:text-content text-content2'>Claudia Saldivar</span> a Full-stack developer specializing in web applications and 
+          microservices. I work with technologies like JavaScript, React, Next.js, Django, Flask, Laravel, and databases such as Postgres, Mongo, 
+          and MySQL. I’m focused on creating user-friendly applications while enhancing my technical skills and expanding my knowledge in 
+          Site Reliability Engineering (SRE). This space is my digital portfolio, where I share my projects and insights from my developer journey.
         </p>
         
         {/* Social Links */}
@@ -81,14 +78,14 @@ const HomePage: FC = () => {
             <div key={index} className='flex py-2'>
               <a
                 href={work.url}
-                className="dark:text-title text-subtitles underline font-medium"
+                className="dark:text-title text-subtitles underline font-medium pr-2"
               >
                 {work.company}
               </a>
               <p className="dark:text-title text-subtitles">&nbsp;{work.description}</p>
             </div>
           ))}
-          <a href="#" className="dark:text-title text-subtitles font-bold hover:underline block py-2">
+          <a href="https://www.linkedin.com/in/claudia-saldivar/" target="_blank" className="dark:text-title text-subtitles font-bold hover:underline block py-2">
             More Places I've worked
           </a>
         </div>

@@ -21,14 +21,14 @@ body {
 
 @font-face {
   font-family: 'Menlo'; /* Usa el mismo nombre de familia */
-  src: url('/fonts/Menlo-Regular.ttf') format('truetype');
+  src: url('../../public/fonts/Menlo-Regular.ttf') format('truetype');
   font-weight: normal; /* Peso normal */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Menlo'; /* Usa el mismo nombre de familia */
-  src: url('/fonts/Menlo-Bold.ttf') format('truetype');
+  src: url('../../public/fonts/Menlo-Bold.ttf') format('truetype');
   font-weight: bold; /* Peso bold */
   font-style: normal;
 }
