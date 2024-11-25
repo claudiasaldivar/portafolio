@@ -4,12 +4,7 @@ import { getPosts } from '@/data/posts';
 import Header from '@/app/components/header';
 import Footer from '@/app/components/footer';
 
-interface PostPageProps {
-  params: {
-    id: string;
-  };
-}
-
+// Genera los parámetros estáticos para las rutas dinámicas
 export async function generateStaticParams() {
   const posts = await getPosts();
   return posts.map((post) => ({
@@ -17,24 +12,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PostPageProps) {
-  const posts = await getPosts();
-  const post = posts.find((p) => p.id === params.id);
+export default async function BlogPostPage({
+  params,
+}: { params: Promise<unknown> }) {
+  const resolvedParams = await params;
 
-  if (!post) {
-    return {
-      title: 'Blog Post Not Found',
-    };
+  if (typeof resolvedParams !== 'object' || resolvedParams === null || !('id' in resolvedParams)) {
+    throw new Error('Invalid params');
   }
 
-  return {
-    title: post.title,
-  };
-}
+  const { id } = resolvedParams as { id: string };
 
-export default async function BlogPostPage({ params }: PostPageProps) {
   const posts = await getPosts();
-  const post = posts.find((p) => p.id === params.id);
+  const post = posts.find((p) => p.id === id);
 
   if (!post) {
     return <div>Blog post not found</div>;
